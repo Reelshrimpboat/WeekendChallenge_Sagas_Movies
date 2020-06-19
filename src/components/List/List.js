@@ -4,15 +4,21 @@ import { connect } from 'react-redux';
 
 class List extends Component {
     
+    //gets then disptaches details for a movie
     selectDetails = (event) => {
         console.log('Set Details, Movie Name:' , event.target.name);
+
+        //creates constant that holds details of selected movie
         const movieDetails = this.props.movies.filter((movie) => movie.id == event.target.id);
-        console.log('payload:', movieDetails);
         
+        //dispatch for movie details
         this.props.dispatch({
             type: 'SET_DETAILS',
             payload: movieDetails[0]
         })
+
+        //changes page to details route
+        this.props.history.push('/details');
     }
 
   render() {
@@ -25,6 +31,7 @@ class List extends Component {
                     </tr>
                 </thead>
                 <tbody>
+                    {/* Populates movie table on GET return */}
                     {this.props.movies &&
                         this.props.movies.map((movie, index) => 
                         <tr key={movie.id}>

@@ -5,6 +5,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 //imports pages for routes
 import List from '../List/List'
+import Details from '../Details/Details'
 
 class App extends Component {
   // Renders the entire app on the DOM
@@ -27,6 +28,7 @@ class App extends Component {
       <div className="App">
         <Router>
         <Route exact path="/" component={List} />
+        <Route path="/details" component={Details} />
         </Router>
       </div>
     );

@@ -4,13 +4,16 @@ import './index.css';
 import App from './components/App/App.js';
 import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+
 // Provider allows us to use redux within our react app
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
+
 // Import saga middleware
 import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects'
-//imports axios
+
+// Import axios
 import axios from 'axios';
 
 // Create the rootSaga generator function
@@ -23,8 +26,11 @@ function* rootSaga() {
 //Saga to get movies from database
 function* getMovies(action) {
     try {
+        //defines an array from an axios request to movie database
         const moviesResponse = yield axios.get(`/api/movies/`);
         console.log('moviesResponse:', moviesResponse);
+
+        //sends database response to movies reducer for storage
         yield put({
             type: 'SET_MOVIES',
             payload: moviesResponse.data
@@ -51,6 +57,7 @@ const movies = (state = [], action) => {
     }
 }
 
+// Used to store the details of the selected movie
 const movieDetails = (state = [], action) => {
     switch (action.type) {
         case 'SET_DETAILS':

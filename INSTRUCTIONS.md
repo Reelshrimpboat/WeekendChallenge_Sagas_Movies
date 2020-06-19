@@ -11,9 +11,9 @@ We'll be able to see movies that exist in our DB. We'll also be able to see deta
 
 ## Database Setup
 
-1. Create a database named `saga_movies_weekend`
-2. Run the queries from `database.sql` on the `saga_movies_weekend` database.
-3. You will need to create the junction table between the `movies` and `genres` tables!
+X. Create a database named `saga_movies_weekend`
+X. Run the queries from `database.sql` on the `saga_movies_weekend` database.
+X. You will need to create the junction table between the `movies` and `genres` tables!
 
 ## Install Dependencies
 
@@ -38,16 +38,17 @@ Genres can be applied to many different movies. Movies can have multiple genres.
 
 ### Home / List Page
 
-This should display all of the movies in the movie database. When a movie poster is clicked, a user should be brought to the `/details` view.
+[X]This should display all of the movies in the movie database.
+[]When a movie poster is clicked, a user should be brought to the `/details` view.
 
 ### Details Page
 
-This should show all details **including genres**, for the selected movie.
+[]This should show all details **including genres**, for the selected movie.
 
 The details page should have the buttons:
 
-- `Back to List` button, which should bring the user to the Home Page
-- `Edit` button, which should bring the user to the Edit Page
+- [] `Back to List` button, which should bring the user to the Home Page
+- [] `Edit` button, which should bring the user to the Edit Page
 
 > Base functionality does not require the movie details to load correctly after refresh of the browser.
 
@@ -55,13 +56,13 @@ The details page should have the buttons:
 
 This should show:
 
-- an input field (for changing the movie title), for the selected movie.
-- a textarea (for changing the movie description)
+- [] an input field (for changing the movie title), for the selected movie.
+- [] a textarea (for changing the movie description)
 
 The details page should have the buttons:
 
-- `Cancel` button, which should bring the user to the Details Page
-- `Save` button, which should update the title and description in the database and bring the user to the Details Page
+- [] `Cancel` button, which should bring the user to the Details Page
+- [] `Save` button, which should update the title and description in the database and bring the user to the Details Page
 
 > Base functionality does not require the current values (the existing movie title and description) to populate in the input and textarea.
 
