@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
+//imports pages for routes
 import List from '../List/List'
 
 class App extends Component {
@@ -23,7 +25,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <List />
+        <Router>
+        <Route exact path="/" component={List} />
+        </Router>
       </div>
     );
   }
