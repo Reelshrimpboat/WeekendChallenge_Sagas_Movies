@@ -11,11 +11,13 @@ class Details extends Component {
     backToList = () => {
         this.props.history.push('/');
     }
+    toEdit = () => {
+        this.props.history.push('/Edit');
+    }
 
   render() {
     return (
         <div>
-            <button onClick={this.backToList}>Back To List</button>
             {this.props.movie &&
             <table>
                 <thead>
@@ -32,6 +34,8 @@ class Details extends Component {
                 </tbody>
             </table>
             }
+            <button onClick={this.backToList}>Back To List</button>
+            <button onClick={this.toEdit}>Edit</button>
         </div>
     );
   }

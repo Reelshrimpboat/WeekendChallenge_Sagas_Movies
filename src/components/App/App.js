@@ -6,6 +6,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 //imports pages for routes
 import List from '../List/List'
 import Details from '../Details/Details'
+import Edit from '../Edit/Edit'
 
 class App extends Component {
   // Renders the entire app on the DOM
@@ -28,7 +29,8 @@ class App extends Component {
       <div className="App">
         <Router>
         <Route exact path="/" component={List} />
-        <Route path="/details" component={Details} />
+        <Route path="/Details" component={Details} />
+        <Route path="/Edit" component={Edit} />
         </Router>
       </div>
     );

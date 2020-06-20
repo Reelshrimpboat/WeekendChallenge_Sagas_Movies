@@ -19,6 +19,7 @@ import axios from 'axios';
 // Create the rootSaga generator function
 function* rootSaga() {
     yield(takeEvery("GET_MOVIES", getMovies))
+    yield(takeEvery("EDIT_DETAILS", editMovie))
 }
 
 //SAGAS
@@ -39,6 +40,20 @@ function* getMovies(action) {
         console.log('Error with Movies GET', error);
     };
 }
+
+//Saga to edit movie on database
+function* editMovie(action) {
+    console.log('editMovie, action.payload', action.payload)
+    try {
+        yield axios.put(`/api/movies/${action.payload.id}`, action.payload )
+        yield put({
+            type: 'GET_MOVIES'
+        })
+    } catch (error) {
+        console.log('Error with Edit POST', error);
+    };
+}
+
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
