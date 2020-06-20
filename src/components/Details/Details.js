@@ -16,19 +16,22 @@ class Details extends Component {
     return (
         <div>
             <button onClick={this.backToList}>Back To List</button>
+            {this.props.movie &&
             <table>
                 <thead>
                     <tr>
-                        <th colSpan="2">{this.props.movie.title}</th>
+                        <th colSpan="3">{this.props.movie.title}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><img src={this.props.movie.poster}></img></td>
                         <td>{this.props.movie.description}</td>
+                        <td>{this.props.movie.genre_name}</td>
                     </tr>
                 </tbody>
             </table>
+            }
         </div>
     );
   }

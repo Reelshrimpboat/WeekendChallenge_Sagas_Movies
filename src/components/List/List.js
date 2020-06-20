@@ -28,6 +28,7 @@ class List extends Component {
                 <thead>
                     <tr>
                         <th colSpan="2">Movie:</th>
+                        <th>Genres:</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,6 +46,9 @@ class List extends Component {
                             </td>
                             <td>
                                 <h2>{movie.title}</h2>
+                            </td>
+                            <td>
+                                {movie.genre_name}
                             </td>
                         </tr>)
                     }       
