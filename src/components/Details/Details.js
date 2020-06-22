@@ -28,8 +28,8 @@ class Details extends Component {
                 <tbody>
                     <tr>
                         <td><img src={this.props.movie.poster}></img></td>
-                        <td>{this.props.movie.description}</td>
-                        <td>{this.props.movie.genre_name}</td>
+                        <td className="description">{this.props.movie.description}</td>
+                        <td className="genresDetails">{this.props.movie.genre_name}</td>
                     </tr>
                 </tbody>
             </table>

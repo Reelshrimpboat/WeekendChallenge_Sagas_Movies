@@ -1,24 +1,58 @@
-.App {
-  text-align: center;
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(232, 232, 232);
 }
 
+.App {
+  margin: 0px;
+  padding: 0px;
+}
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  background-color: #111;
+  height: 50px;
+  padding: 0px 0px 20px;
+  top: 0px;
+  width: 100%;
   color: white;
+  text-align: center;
+  position: fixed;
+  margin: 0px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.wrapper{
+  background-color: rgb(245, 245, 245);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  padding: 10px 20px;
+  border: 1px solid lightslategray;
 }
 
-.App-intro {
-  font-size: large;
+textarea{
+  width: 90%;
+  height: 200px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+th{
+  text-align: left;
+  font-size: 2em;
+}
+.title{
+  text-align: center;
+  padding: 0px 10px;
+}
+.description{
+  text-align: left;
+  padding: 0px 20px;
+  vertical-align: top;
+}
+.genres{
+  text-align: center;
+}
+.genresDetails{
+  text-align: center;
+  vertical-align: top;
 }

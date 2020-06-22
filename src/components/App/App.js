@@ -27,11 +27,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <section className="App-header">
+          <h1>Welcome to a Movie Database!</h1>
+        </section>
+        <div className="wrapper">
         <Router>
         <Route exact path="/" component={List} />
         <Route path="/Details" component={Details} />
         <Route path="/Edit" component={Edit} />
         </Router>
+        </div>
       </div>
     );
   }

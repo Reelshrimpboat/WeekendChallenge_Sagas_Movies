@@ -44,10 +44,10 @@ class List extends Component {
                                     name={movie.title}>
                                 </img>
                             </td>
-                            <td>
+                            <td className="title">
                                 <h2>{movie.title}</h2>
                             </td>
-                            <td>
+                            <td className="genres">
                                 {movie.genre_name}
                             </td>
                         </tr>)
