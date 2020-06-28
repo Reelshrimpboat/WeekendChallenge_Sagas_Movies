@@ -23,8 +23,8 @@ router.put('/:id', (req, res) => {
 
     console.log('in PUT Route, req.body.description', req.body.title)
 
-    let queryText = `UPDATE "movies" SET ("title", "description")=('${req.body.title}' , '${req.body.description}') WHERE "id"='${req.body.id}';`;
-    pool.query(queryText)
+    let queryText = `UPDATE "movies" SET ("title", "description")=($1 , $2) WHERE "id"=$3;`;
+    pool.query(queryText, [req.body.title, req.body.description, req.body.id])
         .then((result) => {
             console.log('PUT Success', result);
             res.sendStatus(200);
